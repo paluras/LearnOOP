@@ -1,5 +1,10 @@
 import Game from "./Game.js";
 
+
+const ROW = 3;
+const COL = 3;
+
+
 class GameDOM extends Game {
   constructor() {
     super(); // Call the constructor of the Game class
@@ -29,6 +34,9 @@ class GameDOM extends Game {
     // Recreate the game board
     this.createDOMBoard();
   }
+
+
+  
 
   createBoxElement(i, j) {
     const div = document.createElement("div");
@@ -63,6 +71,8 @@ class GameDOM extends Game {
       }
     }
   }
+
+  // This should be in Game or rethink the logic of this
   handleGameWin(){
     setTimeout(()=>{
         alert("You won!");
